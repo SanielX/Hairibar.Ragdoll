@@ -1,3 +1,9 @@
+# Changes made
+Removed all dependencies, making it a single package with only 2 assemblies.
+
+Reasons being: more assemblies -> more stuff to do on domain reload, makes editor slow. Same goes for NaughtyAttributes, those are no more since that package completely destroys my editor performance. 
+Removed a lot of stuff that used to be in EngineExtensions but isn't used by package, made most of it internal too.
+
 # Hairibar.Ragdoll
 A Unity package for making ragdolls and animating them with keyframed animations. See it in action at https://youtu.be/ByNPbbACf40.
 
@@ -251,10 +257,7 @@ Add the following dependencies to your manifest.json:
 {
   "dependencies": {
     ...
-    "com.dbrizov.naughtyattributes": "https://github.com/dbrizov/NaughtyAttributes.git#v2.0.7",
-    "com.hairibar.naughtyextensions": "https://github.com/hairibar/Hairibar.NaughtyExtensions.git#v1.3.0",
-    "com.hairibar.engineextensions": "https://github.com/hairibar/Hairibar.EngineExtensions.git#v2.3.0",
-    "com.hairibar.ragdoll": "https://github.com/hairibar/Hairibar.Ragdoll.git#upm"
+    "com.hairibar.ragdoll": "https://github.com/SanielX/Hairibar.Ragdoll.Simplified.git"
     ...
   }
 }
